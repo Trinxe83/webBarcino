@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Barcino Consignacions SL – Mayoristas de pescado y marisco fresco en el Mercat del Peix de Mercabarna, Barcelona. Consignación, venta al mayor, importación y exportación.">
-    <meta name="keywords" content="mayorista pescado Barcelona, Mercabarna, Mercat del Peix, consignación pescado, pescado fresco, marisco, importación exportación">
-    <title>Barcino Consignacions SL | Mayoristas de Pescado Fresco · Mercabarna</title>
+    <meta name="description" content="Barcino Consignacions SL – Majoristes de peix i marisc fresc al Mercat del Peix de Mercabarna, Barcelona. Consignació, venda a l'engròs, importació i exportació.">
+    <title>Barcino Consignacions SL | Majoristes de Peix Fresc · Mercabarna</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,24 +18,30 @@
     <!-- ═══════════════════════════════════════════════
          NAVBAR
     ═══════════════════════════════════════════════ -->
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Navegació principal">
         <div class="nav-container">
-            <a href="#inicio" class="nav-brand" aria-label="Barcino Consignacions – Inicio">
+
+            <a href="#inicio" class="nav-brand" aria-label="Barcino Consignacions – Inici">
                 <img src="media/BARCINO.jpg" alt="Barcino Consignacions SL" class="nav-logo-img">
             </a>
 
-            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
-                <span></span>
-                <span></span>
-                <span></span>
+            <!-- Selector de llengua -->
+            <div class="lang-switcher" role="group" aria-label="Selecció d'idioma">
+                <button class="lang-btn active" data-lang="ca" aria-pressed="true">CA</button>
+                <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+                <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Obrir menú" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
             </button>
 
             <ul class="nav-links" id="navLinks" role="list">
-                <li><a href="#inicio"    class="nav-link">Inicio</a></li>
-                <li><a href="#nosotros"  class="nav-link">Nosotros</a></li>
-                <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#cifras"    class="nav-link">Cifras</a></li>
-                <li><a href="#contacto"  class="nav-link nav-link--cta">Contacto</a></li>
+                <li><a href="#inicio"    class="nav-link" data-i18n="nav.home">Inici</a></li>
+                <li><a href="#nosotros"  class="nav-link" data-i18n="nav.about">Nosaltres</a></li>
+                <li><a href="#servicios" class="nav-link" data-i18n="nav.services">Serveis</a></li>
+                <li><a href="#cifras"    class="nav-link" data-i18n="nav.stats">Xifres</a></li>
+                <li><a href="#contacto"  class="nav-link nav-link--cta" data-i18n="nav.contact">Contacte</a></li>
             </ul>
         </div>
         <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
@@ -52,21 +57,15 @@
         <!-- Silueta pez fondo -->
         <div class="hero-watermark" aria-hidden="true">
             <svg viewBox="0 0 700 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Cuerpo -->
                 <path d="M570,180 C570,180 470,55 230,55 C90,55 18,115 18,180 C18,245 90,305 230,305 C470,305 570,180 570,180 Z"
                       fill="rgba(77,182,198,0.06)" stroke="rgba(77,182,198,0.14)" stroke-width="1.5"/>
-                <!-- Cola -->
                 <path d="M570,180 L660,95 L638,180 L660,265 Z"
                       fill="rgba(77,182,198,0.06)" stroke="rgba(77,182,198,0.14)" stroke-width="1.5" stroke-linejoin="round"/>
-                <!-- Aleta dorsal -->
                 <path d="M300,55 C310,20 380,10 420,55" stroke="rgba(77,182,198,0.10)" stroke-width="1.5" stroke-linecap="round" fill="rgba(77,182,198,0.04)"/>
-                <!-- Aleta ventral -->
                 <path d="M320,305 C330,335 390,345 420,305" stroke="rgba(77,182,198,0.10)" stroke-width="1.5" stroke-linecap="round" fill="rgba(77,182,198,0.04)"/>
-                <!-- Líneas internas (estilo logo) -->
                 <path d="M140,155 C260,125 400,210 520,175" stroke="rgba(77,182,198,0.12)" stroke-width="10" stroke-linecap="round"/>
                 <path d="M130,180 C250,148 390,235 530,190" stroke="rgba(77,182,198,0.09)" stroke-width="7"  stroke-linecap="round"/>
                 <path d="M145,205 C265,175 400,255 515,210" stroke="rgba(77,182,198,0.06)" stroke-width="4"  stroke-linecap="round"/>
-                <!-- Ojo -->
                 <circle cx="180" cy="165" r="16" fill="rgba(77,182,198,0.12)" stroke="rgba(77,182,198,0.22)" stroke-width="2"/>
                 <circle cx="180" cy="165" r="6"  fill="rgba(77,182,198,0.25)"/>
                 <circle cx="176" cy="161" r="3"  fill="rgba(255,255,255,0.18)"/>
@@ -87,12 +86,12 @@
                 <p class="hero-brand-tagline">Consignacions S.L.</p>
             </div>
 
-            <p class="hero-title fade-in-hero" style="animation-delay:.3s">
-                Mayoristas de Pescado Fresco
+            <p class="hero-title fade-in-hero" style="animation-delay:.3s" data-i18n="hero.title">
+                Majoristes de Peix Fresc
             </p>
 
-            <p class="hero-subtitle fade-in-hero" style="animation-delay:.5s">
-                Consignación &nbsp;·&nbsp; Venta &nbsp;·&nbsp; Importación &nbsp;·&nbsp; Exportación
+            <p class="hero-subtitle fade-in-hero" style="animation-delay:.5s" data-i18n="hero.subtitle">
+                Consignació · Venda · Importació · Exportació
             </p>
 
             <div class="fade-in-hero" style="animation-delay:.7s">
@@ -100,21 +99,20 @@
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
                     </svg>
-                    Mercat del Peix · Mercabarna · Barcelona
+                    <span data-i18n="hero.badge">Mercat del Peix · Mercabarna · Barcelona</span>
                 </span>
             </div>
 
-            <a href="#contacto" class="btn-primary fade-in-hero" style="animation-delay:.9s">
-                Contactar ahora
+            <a href="#contacto" class="btn-primary fade-in-hero" style="animation-delay:.9s" data-i18n="hero.cta">
+                Contactar ara
             </a>
         </div>
 
         <div class="hero-scroll-hint fade-in-hero" style="animation-delay:1.3s" aria-hidden="true">
-            <span>Conoce más</span>
+            <span data-i18n="hero.scroll">Descobreix més</span>
             <div class="scroll-arrow"></div>
         </div>
 
-        <!-- Ondas animadas hero → about -->
         <div class="hero-waves" aria-hidden="true">
             <div class="wave-layer wave-layer--1">
                 <svg viewBox="0 0 2880 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -135,25 +133,25 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         SOBRE NOSOTROS
+         SOBRE NOSALTRES
     ═══════════════════════════════════════════════ -->
     <section class="about" id="nosotros">
         <div class="container">
             <div class="section-header reveal-up">
-                <span class="section-tag">Quiénes somos</span>
-                <h2 class="section-title">Tradición y excelencia<br>en el corazón de Mercabarna</h2>
+                <span class="section-tag" data-i18n="about.tag">Qui som</span>
+                <h2 class="section-title" data-i18n-html="about.title">Tradició i excel·lència<br>al cor de Mercabarna</h2>
             </div>
 
             <div class="about-grid">
                 <div class="about-text reveal-left">
-                    <p>Somos una empresa mayorista especializada en la <strong>consignación y comercialización de pescado y marisco fresco</strong>, con sede en el Mercat del Peix de Mercabarna, el mayor centro de distribución alimentaria del sur de Europa.</p>
-                    <p>Desde nuestra fundación en 2014, nos hemos consolidado como un referente del sector con <strong>7 puestos propios en el mercado</strong>, lo que nos permite ofrecer la mayor variedad y calidad directamente desde la lonja cada mañana.</p>
-                    <p>Trabajamos con pescaderías, restaurantes, supermercados y distribuidores de toda España y Europa, garantizando siempre la <strong>máxima frescura y trazabilidad</strong> del producto.</p>
+                    <p data-i18n-html="about.p1">Som una empresa majorista especialitzada en la <strong>consignació i comercialització de peix i marisc fresc</strong>, amb seu al Mercat del Peix de Mercabarna, el major centre de distribució alimentària del sud d'Europa.</p>
+                    <p data-i18n-html="about.p2">Des de la nostra fundació el 2014, ens hem consolidat com un referent del sector amb <strong>7 parades pròpies al mercat</strong>, cosa que ens permet oferir la major varietat i qualitat directament des de la llotja cada matí.</p>
+                    <p data-i18n-html="about.p3">Treballem amb peixateries, restaurants, supermercats i distribuïdors de tot Espanya i Europa, garantint sempre la <strong>màxima frescor i traçabilitat</strong> del producte.</p>
                     <div class="about-badges">
-                        <span class="badge">Puestos 11, 12, 13</span>
-                        <span class="badge">Puestos 22, 67, 75, 76</span>
-                        <span class="badge">Miembros GMP Mercabarna</span>
-                        <span class="badge">Fundada en 2014</span>
+                        <span class="badge" data-i18n="about.badge1">Parades 11, 12, 13</span>
+                        <span class="badge" data-i18n="about.badge2">Parades 22, 67, 75, 76</span>
+                        <span class="badge" data-i18n="about.badge3">Membres GMP Mercabarna</span>
+                        <span class="badge" data-i18n="about.badge4">Fundada el 2014</span>
                     </div>
                 </div>
 
@@ -178,8 +176,8 @@
                             </div>
                             <div class="visual-label">
                                 <span class="visual-tag">Mercabarna</span>
-                                <p class="visual-text">Mercat Central del Peix</p>
-                                <p class="visual-subtext">Barcelona · España</p>
+                                <p class="visual-text" data-i18n="about.visualText">Mercat Central del Peix</p>
+                                <p class="visual-subtext" data-i18n="about.visualSubtext">Barcelona · Espanya</p>
                             </div>
                         </div>
                     </div>
@@ -189,17 +187,16 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         SERVICIOS
+         SERVEIS
     ═══════════════════════════════════════════════ -->
     <section class="services" id="servicios">
         <div class="container">
             <div class="section-header reveal-up">
-                <span class="section-tag light">Lo que hacemos</span>
-                <h2 class="section-title light">Nuestros servicios</h2>
+                <span class="section-tag light" data-i18n="services.tag">El que fem</span>
+                <h2 class="section-title light" data-i18n="services.title">Els nostres serveis</h2>
             </div>
 
             <div class="services-grid">
-
                 <article class="service-card reveal-up" style="--d:0.10s">
                     <div class="service-icon">
                         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -209,8 +206,8 @@
                             <path d="M6 44H42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3>Consignación</h3>
-                    <p>Gestionamos la venta de tu pescado en el mercado con total transparencia. Liquidaciones diarias y acceso directo a compradores mayoristas.</p>
+                    <h3 data-i18n="services.s1t">Consignació</h3>
+                    <p data-i18n="services.s1d">Gestionem la venda del teu peix al mercat amb total transparència. Liquidacions diàries i accés directe a compradors majoristes.</p>
                 </article>
 
                 <article class="service-card reveal-up" style="--d:0.20s">
@@ -221,8 +218,8 @@
                             <path d="M19 30L23 34L30 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3>Venta Mayorista</h3>
-                    <p>Suministro diario a pescaderías, restaurantes, supermercados y hostelería. Producto fresco garantizado cada mañana desde la lonja.</p>
+                    <h3 data-i18n="services.s2t">Venda Majorista</h3>
+                    <p data-i18n="services.s2d">Subministrament diari a peixateries, restaurants, supermercats i hostaleria. Producte fresc garantit cada matí des de la llotja.</p>
                 </article>
 
                 <article class="service-card reveal-up" style="--d:0.30s">
@@ -234,8 +231,8 @@
                             <path d="M24 10V4M20 8L24 4L28 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3>Importación</h3>
-                    <p>Acceso a las mejores especies del mundo. Colaboramos con los mejores proveedores internacionales para ofrecerte variedad sin límites.</p>
+                    <h3 data-i18n="services.s3t">Importació</h3>
+                    <p data-i18n="services.s3d">Accés a les millors espècies del món. Col·laborem amb els millors proveïdors internacionals per oferir-te varietat sense límits.</p>
                 </article>
 
                 <article class="service-card reveal-up" style="--d:0.40s">
@@ -247,83 +244,76 @@
                             <path d="M24 44V50M20 46L24 50L28 46" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3>Exportación</h3>
-                    <p>Llevamos el mejor pescado mediterráneo a los mercados europeos e internacionales con toda la logística gestionada por nosotros.</p>
+                    <h3 data-i18n="services.s4t">Exportació</h3>
+                    <p data-i18n="services.s4d">Portem el millor peix mediterrani als mercats europeus i internacionals amb tota la logística gestionada per nosaltres.</p>
                 </article>
-
             </div>
         </div>
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         CIFRAS
+         XIFRES
     ═══════════════════════════════════════════════ -->
     <section class="stats" id="cifras">
         <div class="container">
             <div class="section-header reveal-up">
-                <span class="section-tag">En números</span>
-                <h2 class="section-title">Barcino en cifras</h2>
+                <span class="section-tag" data-i18n="stats.tag">En xifres</span>
+                <h2 class="section-title" data-i18n="stats.title">Barcino en xifres</h2>
             </div>
 
             <div class="stats-grid">
-
                 <div class="stat-card reveal-up" style="--d:0.10s">
                     <div class="stat-value">
                         <span class="stat-number" data-target="10">0</span>
                         <span class="stat-unit">+</span>
                     </div>
-                    <p class="stat-label">Años en el mercado</p>
+                    <p class="stat-label" data-i18n="stats.label1">Anys al mercat</p>
                     <div class="stat-bar"><div class="stat-bar-fill" style="--w:100%"></div></div>
                 </div>
-
                 <div class="stat-card reveal-up" style="--d:0.20s">
                     <div class="stat-value">
                         <span class="stat-number" data-target="7">0</span>
                     </div>
-                    <p class="stat-label">Puestos en Mercabarna</p>
+                    <p class="stat-label" data-i18n="stats.label2">Parades a Mercabarna</p>
                     <div class="stat-bar"><div class="stat-bar-fill" style="--w:70%"></div></div>
                 </div>
-
                 <div class="stat-card reveal-up" style="--d:0.30s">
                     <div class="stat-value">
                         <span class="stat-number" data-target="365">0</span>
                     </div>
-                    <p class="stat-label">Días al año operativos</p>
+                    <p class="stat-label" data-i18n="stats.label3">Dies a l'any operatius</p>
                     <div class="stat-bar"><div class="stat-bar-fill" style="--w:100%"></div></div>
                 </div>
-
                 <div class="stat-card reveal-up" style="--d:0.40s">
                     <div class="stat-value">
                         <span class="stat-number" data-target="100">0</span>
                         <span class="stat-unit">%</span>
                     </div>
-                    <p class="stat-label">Producto fresco diario</p>
+                    <p class="stat-label" data-i18n="stats.label4">Producte fresc diari</p>
                     <div class="stat-bar"><div class="stat-bar-fill" style="--w:100%"></div></div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         CONTACTO
+         CONTACTE
     ═══════════════════════════════════════════════ -->
     <section class="contact" id="contacto">
         <div class="container">
             <div class="section-header reveal-up">
-                <span class="section-tag light">Estamos aquí</span>
-                <h2 class="section-title light">Contacta con nosotros</h2>
+                <span class="section-tag light" data-i18n="contact.tag">Som aquí</span>
+                <h2 class="section-title light" data-i18n="contact.title">Contacta amb nosaltres</h2>
             </div>
 
             <div class="contact-grid">
-
                 <div class="contact-card reveal-up" style="--d:0.10s">
                     <div class="contact-icon">
                         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l1.86-1.86c.24-.24.58-.32.88-.22.96.32 2 .5 3.06.5.55 0 1 .45 1 1V18c0 .55-.45 1-1 1C9.72 19 3 12.28 3 4c0-.55.45-1 1-1H6.5c.55 0 1 .45 1 1 0 1.07.18 2.1.5 3.06.1.3.02.63-.22.88L6.6 10.8z"/>
                         </svg>
                     </div>
-                    <h3>Teléfono</h3>
+                    <h3 data-i18n="contact.c1h3">Telèfon</h3>
                     <a href="tel:+34935567013" class="contact-value">93 556 70 13</a>
                 </div>
 
@@ -333,7 +323,7 @@
                             <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                         </svg>
                     </div>
-                    <h3>Email</h3>
+                    <h3 data-i18n="contact.c2h3">Correu electrònic</h3>
                     <a href="mailto:administracion@barcinoconsignaciones.com" class="contact-value contact-value--sm">administracion@<wbr>barcinoconsignaciones.com</a>
                 </div>
 
@@ -343,8 +333,8 @@
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
                         </svg>
                     </div>
-                    <h3>Dirección</h3>
-                    <address class="contact-value contact-value--addr">
+                    <h3 data-i18n="contact.c3h3">Adreça</h3>
+                    <address class="contact-value contact-value--addr" data-i18n-html="contact.c3val">
                         C/ Mercat del Peix, 13<br>
                         Zona Franca · Mercabarna<br>
                         08040 Barcelona
@@ -357,26 +347,21 @@
                             <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
                         </svg>
                     </div>
-                    <h3>Horario</h3>
-                    <p class="contact-value">
-                        Lunes a Sábado<br>
-                        Apertura en madrugada<br>
-                        Según calendario Mercabarna
+                    <h3 data-i18n="contact.c4h3">Horari</h3>
+                    <p class="contact-value" data-i18n-html="contact.c4val">
+                        Dilluns a Dissabte<br>
+                        Obertura a la matinada<br>
+                        Segons calendari Mercabarna
                     </p>
                 </div>
-
             </div>
 
             <div class="map-wrap reveal-up" style="--d:0.20s">
                 <iframe
-                    title="Ubicación Barcino Consignacions – Mercabarna Barcelona"
-                    src="https://maps.google.com/maps?q=Mercabarna+Zona+Franca+Barcelona&output=embed&z=15&hl=es"
-                    width="100%"
-                    height="380"
-                    style="border:0;"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    allowfullscreen>
+                    title="Ubicació Barcino Consignacions – Mercabarna Barcelona"
+                    src="https://maps.google.com/maps?q=Mercabarna+Zona+Franca+Barcelona&output=embed&z=15&hl=ca"
+                    width="100%" height="380" style="border:0;"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
                 </iframe>
             </div>
         </div>
@@ -390,14 +375,14 @@
             <div class="footer-inner">
                 <img src="media/BARCINO.jpg" alt="Barcino Consignacions SL" class="footer-logo">
                 <div class="footer-info">
-                    <p>© 2025 Barcino Consignacions SL &nbsp;·&nbsp; CIF B66284555</p>
-                    <p>Mercat del Peix · Mercabarna · 08040 Barcelona</p>
+                    <p data-i18n="footer.copy">© 2025 Barcino Consignacions SL · CIF B66284555</p>
+                    <p data-i18n="footer.address">Mercat del Peix · Mercabarna · 08040 Barcelona</p>
                 </div>
-                <nav class="footer-nav" aria-label="Pie de página">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#nosotros">Nosotros</a>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#contacto">Contacto</a>
+                <nav class="footer-nav" aria-label="Peu de pàgina">
+                    <a href="#inicio"    data-i18n="footer.home">Inici</a>
+                    <a href="#nosotros"  data-i18n="footer.about">Nosaltres</a>
+                    <a href="#servicios" data-i18n="footer.services">Serveis</a>
+                    <a href="#contacto"  data-i18n="footer.contact">Contacte</a>
                 </nav>
             </div>
         </div>
@@ -406,5 +391,6 @@
     <script src="js/particles.js"></script>
     <script src="js/main.js"></script>
     <script src="js/cursor.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>
