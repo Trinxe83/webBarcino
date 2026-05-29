@@ -12,8 +12,12 @@
 (function () {
     'use strict';
 
-    /* ── Sin efecto en táctil ── */
-    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return;
+    /* ── Solo con puntero fino (ratón/trackpad) ──
+       Antes se desactivaba ante cualquier pantalla táctil, lo que ocultaba
+       el efecto en portátiles táctiles aunque usaran ratón. Ahora basta con
+       que exista un puntero fino disponible (p. ej. ratón en monitor externo).
+    */
+    if (!window.matchMedia('(any-pointer: fine)').matches) return;
 
     /* ════════════════════════════════════════
        ESTILOS
