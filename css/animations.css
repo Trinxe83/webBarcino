@@ -142,3 +142,51 @@
     50%  { background-position: 100% 50%; }
     100% { background-position: 0%   50%; }
 }
+
+/* ═══════════════════════════════════════════════════
+   PRELOADER – barra indeterminada
+═══════════════════════════════════════════════════ */
+@keyframes preloadSlide {
+    0%   { transform: translateX(-120%); }
+    100% { transform: translateX(320%); }
+}
+
+/* ═══════════════════════════════════════════════════
+   HERO – RAYOS DE LUZ (god rays)
+═══════════════════════════════════════════════════ */
+@keyframes rayShimmer {
+    0%, 100% { opacity: .35; transform: rotate(8deg) translateX(0); }
+    50%       { opacity: .8;  transform: rotate(8deg) translateX(14px); }
+}
+
+/* ═══════════════════════════════════════════════════
+   HERO – CÁUSTICAS DE AGUA
+═══════════════════════════════════════════════════ */
+@keyframes causticsDrift {
+    0%   { background-position: 0%   0%;   }
+    100% { background-position: 100% 100%; }
+}
+
+/* ═══════════════════════════════════════════════════
+   BANCO DE PECES – nado horizontal
+═══════════════════════════════════════════════════ */
+@keyframes swimAcross {
+    from { transform: translateX(-15vw); }
+    to   { transform: translateX(115vw); }
+}
+
+/* ═══════════════════════════════════════════════════
+   ACCESIBILIDAD – respetar "movimiento reducido"
+═══════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+        scroll-behavior: auto !important;
+    }
+    .hero-rays,
+    .hero-caustics { display: none; }
+}

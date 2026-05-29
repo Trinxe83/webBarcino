@@ -26,8 +26,14 @@
                 description: 'Barcino Consignacions SL – Majoristes de peix i marisc fresc al Mercat del Peix de Mercabarna, Barcelona. Consignació, venda a l\'engròs, importació i exportació.'
             },
             nav: {
-                home: 'Inici', about: 'Nosaltres',
+                home: 'Inici', about: 'Nosaltres', products: 'Producte',
                 services: 'Serveis', stats: 'Xifres', contact: 'Contacte'
+            },
+            gallery: {
+                tag:   'El nostre producte',
+                title: 'Frescor de la llotja cada matí',
+                g1: 'Llobarro', g2: 'Gamba vermella', g3: 'Pop',
+                g4: 'Rap', g5: 'Tonyina', g6: 'Cloïsses'
             },
             hero: {
                 title:    'Majoristes de Peix Fresc',
@@ -82,7 +88,7 @@
             footer: {
                 copy:    '© 2025 Barcino Consignacions SL · CIF B66284555',
                 address: 'Mercat del Peix · Mercabarna · 08040 Barcelona',
-                home: 'Inici', about: 'Nosaltres',
+                home: 'Inici', about: 'Nosaltres', products: 'Producte',
                 services: 'Serveis', contact: 'Contacte'
             }
         },
@@ -94,8 +100,14 @@
                 description: 'Barcino Consignacions SL – Mayoristas de pescado y marisco fresco en el Mercat del Peix de Mercabarna, Barcelona. Consignación, venta al mayor, importación y exportación.'
             },
             nav: {
-                home: 'Inicio', about: 'Nosotros',
+                home: 'Inicio', about: 'Nosotros', products: 'Producto',
                 services: 'Servicios', stats: 'Cifras', contact: 'Contacto'
+            },
+            gallery: {
+                tag:   'Nuestro producto',
+                title: 'Frescura de la lonja cada mañana',
+                g1: 'Lubina', g2: 'Gamba roja', g3: 'Pulpo',
+                g4: 'Rape', g5: 'Atún', g6: 'Almejas'
             },
             hero: {
                 title:    'Mayoristas de Pescado Fresco',
@@ -150,7 +162,7 @@
             footer: {
                 copy:    '© 2025 Barcino Consignacions SL · CIF B66284555',
                 address: 'Mercat del Peix · Mercabarna · 08040 Barcelona',
-                home: 'Inicio', about: 'Nosotros',
+                home: 'Inicio', about: 'Nosotros', products: 'Producto',
                 services: 'Servicios', contact: 'Contacto'
             }
         },
@@ -162,8 +174,14 @@
                 description: 'Barcino Consignacions SL – Fresh fish and seafood wholesalers at Mercat del Peix, Mercabarna, Barcelona. Consignment, wholesale sales, import and export.'
             },
             nav: {
-                home: 'Home', about: 'About',
+                home: 'Home', about: 'About', products: 'Products',
                 services: 'Services', stats: 'Figures', contact: 'Contact'
+            },
+            gallery: {
+                tag:   'Our product',
+                title: 'Fresh from the market every morning',
+                g1: 'Sea bass', g2: 'Red prawn', g3: 'Octopus',
+                g4: 'Monkfish', g5: 'Tuna', g6: 'Clams'
             },
             hero: {
                 title:    'Fresh Fish Wholesalers',
@@ -218,7 +236,7 @@
             footer: {
                 copy:    '© 2025 Barcino Consignacions SL · VAT B66284555',
                 address: 'Fish Market · Mercabarna · 08040 Barcelona',
-                home: 'Home', about: 'About',
+                home: 'Home', about: 'About', products: 'Products',
                 services: 'Services', contact: 'Contact'
             }
         }

@@ -6,6 +6,24 @@
     <meta name="description" content="Barcino Consignacions SL – Majoristes de peix i marisc fresc al Mercat del Peix de Mercabarna, Barcelona. Consignació, venda a l'engròs, importació i exportació.">
     <title>Barcino Consignacions SL | Majoristes de Peix Fresc · Mercabarna</title>
 
+    <!-- Color de tema (barra del navegador en mòbil) -->
+    <meta name="theme-color" content="#003049">
+
+    <!-- Favicon (peix turquesa, SVG inline; sense fitxer extern) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -9 36 36'%3E%3Cpath d='M26,9 C26,9 20,2 12,2 C6,2 2,5 2,9 C2,13 6,16 12,16 C20,16 26,9 26,9 Z' fill='%230d8fa3'/%3E%3Cpath d='M26,9 L34,4 L32,9 L34,14 Z' fill='%230d8fa3'/%3E%3Ccircle cx='9' cy='7.5' r='1.6' fill='%23ffffff'/%3E%3C/svg%3E">
+
+    <!-- Open Graph / Twitter (miniatura en compartir l'enllaç) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ca_ES">
+    <meta property="og:site_name" content="Barcino Consignacions SL">
+    <meta property="og:title" content="Barcino Consignacions SL | Majoristes de Peix Fresc">
+    <meta property="og:description" content="Majoristes de peix i marisc fresc al Mercat del Peix de Mercabarna, Barcelona. Consignació, venda a l'engròs, importació i exportació.">
+    <meta property="og:image" content="media/BARCINO.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Barcino Consignacions SL | Majoristes de Peix Fresc">
+    <meta name="twitter:description" content="Majoristes de peix i marisc fresc al Mercat del Peix de Mercabarna, Barcelona.">
+    <meta name="twitter:image" content="media/BARCINO.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -14,6 +32,24 @@
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
+
+    <!-- ═══════════════════════════════════════════════
+         PRELOADER
+    ═══════════════════════════════════════════════ -->
+    <div class="preloader" id="preloader" role="status" aria-label="Carregant">
+        <div class="preloader-fish" aria-hidden="true">
+            <svg width="80" height="44" viewBox="0 0 46 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31,13 C31,13 25,3 13,3 C5,3 1,8 1,13 C1,18 5,23 13,23 C25,23 31,13 31,13 Z" fill="rgba(13,143,163,0.95)"/>
+                <path d="M31,13 L45,5 L42,13 L45,21 Z" fill="rgba(13,143,163,0.9)"/>
+                <circle cx="11" cy="10.5" r="3.2" fill="#fff"/>
+                <circle cx="11" cy="10.5" r="1.6" fill="#001a2c"/>
+            </svg>
+        </div>
+        <div class="preloader-bar" aria-hidden="true"><span></span></div>
+    </div>
+
+    <!-- Barra de progrés de scroll -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
     <!-- ═══════════════════════════════════════════════
          NAVBAR
@@ -39,6 +75,7 @@
             <ul class="nav-links" id="navLinks" role="list">
                 <li><a href="#inicio"    class="nav-link" data-i18n="nav.home">Inici</a></li>
                 <li><a href="#nosotros"  class="nav-link" data-i18n="nav.about">Nosaltres</a></li>
+                <li><a href="#producte"  class="nav-link" data-i18n="nav.products">Producte</a></li>
                 <li><a href="#servicios" class="nav-link" data-i18n="nav.services">Serveis</a></li>
                 <li><a href="#cifras"    class="nav-link" data-i18n="nav.stats">Xifres</a></li>
                 <li><a href="#contacto"  class="nav-link nav-link--cta" data-i18n="nav.contact">Contacte</a></li>
@@ -51,6 +88,16 @@
          HERO
     ═══════════════════════════════════════════════ -->
     <section class="hero" id="inicio" aria-label="Portada Barcino Consignacions">
+        <!-- Foto de fons opcional: deixa el fitxer media/hero.jpg i apareixerà
+             automàticament darrere del degradat. Si no existeix, no passa res. -->
+        <div class="hero-bg" aria-hidden="true"></div>
+
+        <!-- Llum submarina: rajos descendents + càustiques -->
+        <div class="hero-rays" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="hero-caustics" aria-hidden="true"></div>
+
         <canvas id="bubblesCanvas" aria-hidden="true"></canvas>
         <div class="hero-glow" aria-hidden="true"></div>
 
@@ -187,9 +234,51 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
+         PRODUCTE (GALERIA)
+         Per posar fotos reals: deixa els fitxers
+         media/producte-1.jpg … producte-6.jpg.
+         Si un fitxer no existeix es mostra un marcador elegant.
+    ═══════════════════════════════════════════════ -->
+    <section class="gallery" id="producte">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag" data-i18n="gallery.tag">El nostre producte</span>
+                <h2 class="section-title" data-i18n="gallery.title">Frescor de la llotja cada matí</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <figure class="gallery-item reveal-up" style="--d:0.05s">
+                    <img src="media/producte-1.jpg" alt="Llobarro fresc" loading="lazy" onerror="this.remove()">
+                    <figcaption data-i18n="gallery.g1">Llobarro</figcaption>
+                </figure>
+                <figure class="gallery-item reveal-up" style="--d:0.10s">
+                    <img src="media/producte-2.jpg" alt="Gamba vermella" loading="lazy" onerror="this.remove()">
+                    <figcaption data-i18n="gallery.g2">Gamba vermella</figcaption>
+                </figure>
+                <figure class="gallery-item reveal-up" style="--d:0.15s">
+                    <img src="media/producte-3.jpg" alt="Pop" loading="lazy" onerror="this.remove()">
+                    <figcaption data-i18n="gallery.g3">Pop</figcaption>
+                </figure>
+                <figure class="gallery-item reveal-up" style="--d:0.20s">
+                    <img src="media/producte-4.jpg" alt="Rap" loading="lazy" onerror="this.remove()">
+                    <figcaption data-i18n="gallery.g4">Rap</figcaption>
+                </figure>
+                <figure class="gallery-item reveal-up" style="--d:0.25s">
+                    <img src="media/producte-5.jpg" alt="Tonyina" loading="lazy" onerror="this.remove()">
+                    <figcaption data-i18n="gallery.g5">Tonyina</figcaption>
+                </figure>
+                <figure class="gallery-item reveal-up" style="--d:0.30s">
+                    <img src="media/producte-6.jpg" alt="Cloïsses" loading="lazy" onerror="this.remove()">
+                    <figcaption data-i18n="gallery.g6">Cloïsses</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
          SERVEIS
     ═══════════════════════════════════════════════ -->
-    <section class="services" id="servicios">
+    <section class="services" id="servicios" data-fish="6">
         <div class="container">
             <div class="section-header reveal-up">
                 <span class="section-tag light" data-i18n="services.tag">El que fem</span>
@@ -299,7 +388,7 @@
     <!-- ═══════════════════════════════════════════════
          CONTACTE
     ═══════════════════════════════════════════════ -->
-    <section class="contact" id="contacto">
+    <section class="contact" id="contacto" data-fish="5">
         <div class="container">
             <div class="section-header reveal-up">
                 <span class="section-tag light" data-i18n="contact.tag">Som aquí</span>
@@ -381,6 +470,7 @@
                 <nav class="footer-nav" aria-label="Peu de pàgina">
                     <a href="#inicio"    data-i18n="footer.home">Inici</a>
                     <a href="#nosotros"  data-i18n="footer.about">Nosaltres</a>
+                    <a href="#producte"  data-i18n="footer.products">Producte</a>
                     <a href="#servicios" data-i18n="footer.services">Serveis</a>
                     <a href="#contacto"  data-i18n="footer.contact">Contacte</a>
                 </nav>
@@ -390,6 +480,7 @@
 
     <script src="js/particles.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/effects.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/i18n.js"></script>
 </body>

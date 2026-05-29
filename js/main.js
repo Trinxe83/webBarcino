@@ -6,6 +6,38 @@
     'use strict';
 
     /* ═══════════════════════════════
+       PRELOADER – ocultar al cargar
+    ═══════════════════════════════ */
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        const hidePreloader = function () {
+            preloader.classList.add('hidden');
+            /* Quitarlo del flujo tras la transición */
+            setTimeout(function () { preloader.remove(); }, 700);
+        };
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 450);   /* breve respiro para ver el pez */
+        });
+        /* Salvavidas: si 'load' no dispara, ocultar igualmente */
+        setTimeout(hidePreloader, 4000);
+    }
+
+    /* ═══════════════════════════════
+       BARRA DE PROGRESO DE SCROLL
+    ═══════════════════════════════ */
+    const progressBar = document.getElementById('scrollProgress');
+    if (progressBar) {
+        const updateProgress = function () {
+            const h = document.documentElement;
+            const max = h.scrollHeight - h.clientHeight;
+            const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+            progressBar.style.width = pct + '%';
+        };
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        updateProgress();
+    }
+
+    /* ═══════════════════════════════
        NAVBAR – efecto al hacer scroll
     ═══════════════════════════════ */
     const navbar = document.getElementById('navbar');

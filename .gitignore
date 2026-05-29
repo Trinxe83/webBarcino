@@ -1,0 +1,6 @@
+# Configuració local d'eines (Claude Code / preview) — no forma part del web
+.claude/
+
+# Sistema
+Thumbs.db
+.DS_Store
